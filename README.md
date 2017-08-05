@@ -1,8 +1,18 @@
-# README
+# Railscrum
+Simple Rails App to manage a Scrum board
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
+Before you run, type:
+```
+gem install
+```
 
+## Start:
+```
+rails server
+```
+
+# Other
 Things you may want to cover:
 
 * Ruby version
