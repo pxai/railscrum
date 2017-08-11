@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'board/index'
+
+  get 'board/board'
+
+  get 'board/new'
+
   get 'home/index'
   get 'sign_in/signin'
 
