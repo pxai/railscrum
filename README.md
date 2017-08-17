@@ -1,10 +1,18 @@
 # Railscrum
 Simple Rails App to manage a Scrum board
 
+## Requisites
+- Ruby
+- Rails
+- Bundler
+
+```
+gem install bundler
+```
 ## Install
 Before you run, type:
 ```
-gem install
+bundle install
 ```
 
 ## Start:
