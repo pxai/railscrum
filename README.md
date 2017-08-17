@@ -1,6 +1,10 @@
 # Railscrum
 Simple Rails App to manage a Scrum board
 
+## Note for windows users
+Use the good old cmd to run commands to avoid issues with
+case sensitive directories and other surprises.
+
 ## Requisites
 - Ruby
 - Rails
