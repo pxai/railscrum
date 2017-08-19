@@ -1,5 +1,6 @@
 <%= link_to 'Show all', :boards %>
 <h2>Story detail</h2>
+        <div><%= link_to 'Back to board', board_path(@story.board_id) %></div>
 <p>
   <strong>Title:</strong>
   <%= @story.title %>

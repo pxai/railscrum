@@ -6,7 +6,11 @@ class StoriesController < ApplicationController
   end
  
   def show
-    @story = Story.find(params[:id])
+    @story = Story.find(params[:board_id])
+  end
+  def edit
+    @board = Board.find(params[:id])
+    @story = Story.find(params[:board_id])
   end
   private
     def story_params
