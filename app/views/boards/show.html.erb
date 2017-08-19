@@ -8,3 +8,38 @@
   <strong>Text:</strong>
   <%= @board.text %>
 </p>
+
+<h2>User Stories</h2>
+<% @board.stories.each do |story| %>
+  <p>
+    <strong>Title:</strong>
+    <b><%= story.id %> - <%= story.title %></b>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= story.body %>
+  </p>
+  <%= story.creation %> 
+        <ul>
+        <li><%= link_to 'Show', board_story_path(story) %></li>
+        <li><%= link_to 'Update', edit_board_story_path(story) %></li>
+        <li><%= link_to 'Destroy', board_story_path(story),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+<% end %>
+ 
+<h2>Add a User Story:</h2>
+<%= form_for([@board, @board.stories.build]) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
