@@ -2,8 +2,16 @@
 
 one:
   title: MyString
-  text: MyText
+  completed: false
+  body: MyText
+  created: 2017-08-19 08:51:28
+  done: 2017-08-19 08:51:28
+  story: one
 
 two:
   title: MyString
-  text: MyText
+  completed: false
+  body: MyText
+  created: 2017-08-19 08:51:28
+  done: 2017-08-19 08:51:28
+  story: two
