@@ -16,9 +16,10 @@ class StoriesController < ApplicationController
     end
 
     def update
+         @board = Board.find(params[:board_id])
         @story = Story.find(params[:id])
         if @story.update(story_params)
-            redirect_to @story
+            redirect_to @board
         else
             render 'edit'
         end
@@ -26,11 +27,11 @@ class StoriesController < ApplicationController
 
 
     def destroy
-        @story = Board.find(params[:id])
+        @story = Story.find(params[:board_id])
         @story.destroy
-        redirect_to story_path
+        redirect_to board_path
     end
-    
+
   private
     def story_params
       params.require(:story).permit(:title, :body)
