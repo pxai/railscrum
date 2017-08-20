@@ -11,8 +11,11 @@ Rails.application.routes.draw do
   get 'story/index'
 
   resources :articles
+  
   resources  :boards do
-    resources :stories
+    resources :stories do
+      resources :tasks
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
