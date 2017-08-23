@@ -10,6 +10,30 @@
   <strong>Text:</strong>
   <%= @story.body %>
 </p>
+<h3>Create new Task for this story</h3>
+<%= render 'tasks/edit' %>
 
 <h3>Tasks for this story</h3>
-<%= render 'tasks/edit' %>
+<% @story.tasks.each do |task| %>
+  <p>
+    <strong>Title:</strong>
+    <b><%= task.id %> - <%= task.title %></b>
+  </p>
+    <p>
+    <strong>Completed:</strong>
+    <%= task.completed %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= task.body %>
+  </p>
+
+  <%= task.created_at %> 
+          <ul>
+        <li><%= link_to 'Show', task_path(task) %></li>
+        <li><%= link_to 'Update', edit_task_path(task) %></li>
+        <li><%= link_to 'Destroy', task_path(task),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+<% end %>

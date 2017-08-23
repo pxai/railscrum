@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   end
  
   def show
-        @task = Task.find(params[:board_id])
+        @task = Task.find(params[:id])
     end
 
     def edit
