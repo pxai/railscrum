@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
   def create
-    @story = Story.find(params[:story_id])
+    @story = Story.find(params[:task][:story_id])
+    @board = Board.find(@story.board_id)
     @task = @story.tasks.create(tasks_params)
-    redirect_to story_path(@story)
+    redirect_to board_stories_path(@board,@story)
   end
  
   def show

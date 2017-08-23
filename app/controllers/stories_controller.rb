@@ -4,7 +4,9 @@ class StoriesController < ApplicationController
         @story = @board.stories.create(story_params)
         redirect_to board_path(@board)
     end
- 
+    def index
+        
+    end
     def show
         @story = Story.find(params[:board_id])
         @task = Task.new

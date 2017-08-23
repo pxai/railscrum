@@ -1,5 +1,5 @@
 
-<%= form_for @task, url: board_story_tasks_path(@task) do |f| %>
+<%= form_for @task do |f| %>
   <%= f.hidden_field :story_id %>
     <p>
       <%= f.label :title %><br>
