@@ -16,8 +16,8 @@
 <h3>Tasks for this story</h3>
 <% @story.tasks.each do |task| %>
   <p>
-    <strong>Title:</strong>
-    <b><%= task.id %> - <%= task.title %></b>
+    
+    <b><%= task.id %> - <strong>Title:</strong> <%= task.title %></b>
   </p>
     <p>
     <strong>Completed:</strong>

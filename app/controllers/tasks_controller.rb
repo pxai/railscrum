@@ -11,15 +11,13 @@ class TasksController < ApplicationController
     end
 
     def edit
-        @story = Story.find(params[:board_id])
         @task = Task.find(params[:id])
     end
 
     def update
-        @story = Story.find(params[:board_id])
         @task = Task.find(params[:id])
-        if @task.update(task_params)
-            redirect_to @story
+        if @task.update(tasks_params)
+            redirect_to @task
         else
             render 'edit'
         end
