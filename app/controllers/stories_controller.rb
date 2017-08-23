@@ -5,9 +5,10 @@ class StoriesController < ApplicationController
         redirect_to board_path(@board)
     end
  
-
     def show
         @story = Story.find(params[:board_id])
+        @task = Task.new
+        @task.story_id = @story.id
     end
 
     def edit

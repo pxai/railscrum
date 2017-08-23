@@ -1,0 +1,13 @@
+
+<%= form_for @task, url: board_story_tasks_path(@task) do |f| %>
+  <%= f.hidden_field :story_id %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body, size: "60x12" %>
+    </p>
+  <%= f.submit "Create" %>
+<% end %>
