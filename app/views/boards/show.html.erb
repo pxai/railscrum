@@ -1,4 +1,4 @@
-<%= link_to 'Show all', :boards %>
+<%= link_to t('show-all'), :boards %>
 <p>
   <strong>Title:</strong>
   <%= @board.title %>
@@ -9,27 +9,27 @@
   <%= @board.text %>
 </p>
 
-<h2>User Stories</h2>
+<h2><%=t("user-stories")%></h2>
 <% @board.stories.each do |story| %>
   <p>
-    <strong>Title:</strong>
+    <strong><%=t("title")%>:</strong>
     <b><%= story.id %> - <%= story.title %></b>
   </p>
   <p>
-    <strong>Body:</strong>
+    <strong><%=t("body")%>:</strong>
     <%= story.body %>
   </p>
   <%= story.creation %> 
         <ul>
-        <li><%= link_to 'Show', board_story_path(story) %></li>
-        <li><%= link_to 'Update', edit_board_story_path(story) %></li>
-        <li><%= link_to 'Destroy', board_story_path(story),
+        <li><%= link_to t('show'), board_story_path(story) %></li>
+        <li><%= link_to t('modify'), edit_board_story_path(story) %></li>
+        <li><%= link_to t('delete'), board_story_path(story),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %></li>
+                      data: { confirm: t('are-you-sure') } %></li>
         </ul>
 <% end %>
  
-<h2>Add a User Story:</h2>
+<h2><%=t("add-user-story")%>:</h2>
 <%= form_for([@board, @board.stories.build]) do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -40,6 +40,6 @@
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit t('create-story') %>
   </p>
 <% end %>

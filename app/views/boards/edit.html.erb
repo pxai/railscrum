@@ -1,4 +1,4 @@
-<h1>Edit board</h1>
+<h1><%=t('edit-board')%></h1>
  
 <%= form_for(@board) do |f| %>
  
@@ -17,19 +17,19 @@
   <% end %>
  
   <p>
-    <%= f.label :title %><br>
+    <%= f.label t(:title) %><br>
     <%= f.text_field :title %>
   </p>
  
   <p>
-    <%= f.label :text %><br>
+    <%= f.label t(:text) %><br>
     <%= f.text_area :text %>
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit t('update-board') %>
   </p>
  
 <% end %>
  
-<%= link_to 'Back', boards_path %>
+<%= link_to t('back'), boards_path %>

@@ -1,0 +1,7 @@
+en:
+  models:
+    task:
+      title: "Task title"
+      body: "Task detail"
+      completed: "Completed"
+      created_at: "Created at..."

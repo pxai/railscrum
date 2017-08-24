@@ -1,18 +1,18 @@
-<%= link_to 'All Boards', controller: 'boards' %>
-<%= link_to 'Create new', :new_board %>
+<%= link_to t('all-boards'), controller: 'boards' %>
+<%= link_to t('create-new'), :new_board %>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th><%=t('title')%></th>
+    <th><%=t('text')%></th>
   </tr>
 
   <% @boards.each do |board| %>
       <tr>
         <td><%= board.title %></td>
         <td><%= board.text %></td>
-        <td><%= link_to 'Show', board_path(board) %></td>
-        <td><%= link_to 'Update', edit_board_path(board) %></td>
-        <td><%= link_to 'Destroy', board_path(board),
+        <td><%= link_to t('show'), board_path(board) %></td>
+        <td><%= link_to t('modify'), edit_board_path(board) %></td>
+        <td><%= link_to t('delete'), board_path(board),
                       method: :delete,
                       data: { confirm: 'Are you sure?' } %></td>
       </tr>

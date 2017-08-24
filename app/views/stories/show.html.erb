@@ -17,23 +17,23 @@
 <% @story.tasks.each do |task| %>
   <p>
     
-    <b><%= task.id %> - <strong>Title:</strong> <%= task.title %></b>
+    <b><%= task.id %> - <strong><%=t('models.task.title')%>:</strong> <%= task.title %></b>
   </p>
     <p>
-    <strong>Completed:</strong>
+    <strong><%=t('models.task.completed')%>:</strong>
     <%= task.completed %>
   </p>
   <p>
-    <strong>Body:</strong>
+    <strong><%=t('body')%>:</strong>
     <%= task.body %>
   </p>
-
+  <%=t('models.task.created_at')%>
   <%= task.created_at %> 
           <ul>
-        <li><%= link_to 'Show', task_path(task) %></li>
-        <li><%= link_to 'Update', edit_task_path(task) %></li>
-        <li><%= link_to 'Destroy', task_path(task),
+        <li><%= link_to t('show'), task_path(task) %></li>
+        <li><%= link_to t('modify'), edit_task_path(task) %></li>
+        <li><%= link_to t('delete'), task_path(task),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %></li>
+                      data: { confirm: t('are-you-sure') } %></li>
         </ul>
 <% end %>

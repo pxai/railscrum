@@ -1,0 +1,7 @@
+en:
+  models:
+    task:
+      title: "Título de tarea"
+      body: "Detalle de tarea"
+      completed: "Completado"
+      created_at: "Creado en"
