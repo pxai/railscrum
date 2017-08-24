@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'board/new'
 
   get 'home/index'
+  get 'home/home'
   get 'sign_in/signin'
 
   get 'story/index'
