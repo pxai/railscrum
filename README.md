@@ -37,3 +37,25 @@ Things you may want to cover:
 * Deployment instructions
 * dau
 * ...897c
+
+# To add an Ember compatible json:api
+
+Create the rails project with --api or add to an existing one:
+
+```
+gem install active_model_serializers
+```
+And
+
+```
+gem install actionpack activemodel json-api railties
+```
+
+## Config for serialization:
+Do not forget to add config/initializers/active_model_serializer.rb
+with this content:
+```
+ActiveModel::Serializer.config.adapter = ActiveModel::Serializer::Adapter::JsonApi
+```
+Add app/serializer for each model
+and then change controller to return json. Check log controller.

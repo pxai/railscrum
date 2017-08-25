@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'story/index'
 
+  get 'log/index'
+
   resources :articles
   
   resources  :boards do
