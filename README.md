@@ -59,3 +59,13 @@ ActiveModel::Serializer.config.adapter = ActiveModel::Serializer::Adapter::JsonA
 ```
 Add app/serializer for each model
 and then change controller to return json. Check log controller.
+
+INSERT - POST http://localhost:3000/logs
+Create data format for post:
+```
+{"log":{"msg":"Now it ends","when":"2017-08-25 13:45:32"}}
+```
+UPDATE - PUT http://localhost:3000/logs/5
+```
+{"log":{"msg":"Now it endssss","when":"2017-08-25 13:45:32"}}
+```
