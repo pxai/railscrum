@@ -28,6 +28,12 @@ class LogsController < ActionController::API
     end
   end
 
+    def destroy
+        @log = Log.find(params[:id])
+        @log.destroy
+        render json: @log
+    end
+
   private
   def log_params
     params.require(:log).permit(:msg, :when)
