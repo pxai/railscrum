@@ -6,7 +6,7 @@ Use the good old cmd to run commands to avoid issues with
 case sensitive directories and other surprises.
 
 ## Requisites
-- Ruby
+- Ruby 2 or latest
 - Rails
 - Bundler
 
@@ -36,7 +36,7 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 * Deployment instructions
 * dau
-* ...897c
+* ...
 
 # To add an Ember compatible json:api
 
